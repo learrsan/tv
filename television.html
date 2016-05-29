@@ -1,0 +1,98 @@
+﻿<html>
+	<head>
+		<title>Televisión</title>
+		
+		<link type="text/css" href="css/jquery-ui.css" rel="stylesheet" />	
+		<link href='http://fonts.googleapis.com/css?family=Ubuntu:300' rel='stylesheet' type='text/css'>
+				
+		<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/jquery-ui.js"></script>
+		
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+		
+		<style>
+		@import url(https://fonts.googleapis.com/css?family=Montserrat);
+			body
+			{
+				background-color: #777777;
+				margin: 0 auto;
+			}
+			.tv
+			{
+				width: 99.8%;
+				height: 95%;
+			}
+			.cadena
+			{
+				width: 17.7%;
+				cursor: pointer;
+				cursor: hand;
+				font-family: 'Montserrat', sans-serif;
+				float: left;
+				border: 2px solid #ffffff;
+				border-radius: 10px;
+				text-align: center;
+				color: #ffffff;
+				margin: 0.5% 1%;
+				transition: all 0.4s;
+			}
+			.cadena:hover
+			{
+				color: #777777;
+				background-color: #ffffff;
+			}
+			
+		</style>
+	</head>
+	
+	<body>
+	
+	<script type="text/javascript">
+			
+				function cambiarVodafone(){
+					var x = document.getElementById("pantalla").src = "http://www.vodafonetvonline.es";
+				}
+				
+				function cambiarPrimera(){
+					var x = document.getElementById("pantalla").src = "http://www.rtve.es/television/";
+				}
+				
+				function cambiarAntena3(){
+					var x = document.getElementById("pantalla").src = "http://www.atresplayer.com/directos/television/antena3/";
+				}
+				
+				function cambiarTelecinco(){
+					var x = document.getElementById("pantalla").src = "http://www.telecinco.es/endirecto/";
+				}
+				
+				function cambiarTelemadrid(){
+					var x = document.getElementById("pantalla").src = "http://www.telemadrid.es/emision_en_directo";
+				}
+			
+				
+	</script>
+	
+		<div id="contenedor">
+			
+			
+			<div id="contenido">
+			<div id="botones">
+							
+				<div class="cadena" id="vodafone" onclick="cambiarVodafone()">Vodafone TV</div>
+				<div class="cadena" id="primera" onclick="cambiarPrimera()">TVE1</div>
+				<div class="cadena" id="antena3" onclick="cambiarAntena3()">Antena 3</div>
+				<div class="cadena" id="telecinco" onclick="cambiarTelecinco()">Telecinco</div>
+				<div class="cadena" id="telemadrid" onclick="cambiarTelemadrid()">Telemadrid</div>
+			</div>	
+				<iframe class="tv" src="http://www.vodafonetvonline.es" id="pantalla"></iframe>
+				
+				
+				
+			</div>
+			
+			
+			
+		</div>
+	</body>
+</html>
